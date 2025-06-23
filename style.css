@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background-image: url("background.jpg");
+	background-position: center;
+	background-size: auto;	
+	background-color: #1e1e1e;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding: 40px 20px;
+	min-height: 100vh;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	background-color: #2c2c2c;
+	opacity: 97%;
+	border-radius: 12px;
+	padding: 30px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+h1 {
+	font-size: 3rem;
+	color: #fefefe;
+	margin-bottom: 10px;
+}
+p {
+	font-size: 1.1rem;
+	color: #ccc;
+}
+.category-buttons {
+	display: flex;
+	overflow-x: auto;
+	gap: 12px;
+	padding: 10px 0;
+	margin-bottom: 30px;
+	scrollbar-width: thin;
+}
+.category-btn {
+	min-width: 100px;
+	flex-shrink: 0;
+}
+.btn {
+	background: linear-gradient(145deg, #fff57f, #e6db5c);
+	border: none;
+	color: #000;
+	padding: 14px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	text-transform: uppercase;
+}
+.btn:hover {
+	transform: scale(1.05);
+	background-color: #f5f167;
+	box-shadow: 0 8px 20px rgba(255, 255, 100, 0.4);
+}
+.category-number {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.category-label {
+	font-size: 0.8rem;
+	letter-spacing: 0.5px;
+}
+.soundboard {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 20px;
+}
+.sound-btn {
+	position: relative;
+}
+.sound-btn .key {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 4px;
+	padding: 2px 6px;
+	font-size: 0.75rem;
+	font-weight: bold;
+	color: #000;
+	pointer-events: none;
+}
+.stop-btn {
+	margin-top: 30px;
+}
+@media (max-width: 600px) {
+	.btn {
+		font-size: 0.9rem;
+		padding: 10px 16px;
+		min-width: 90px;
+	}
+	.category-number {
+		font-size: 1.3rem;
+	}
+	.category-label {
+		font-size: 0.7rem;
+	}
+}
